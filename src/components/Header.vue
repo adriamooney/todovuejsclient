@@ -16,13 +16,16 @@
               <li class="nav-item" v-if="isLoggedIn">
                  <router-link to="todos" class="nav-link">Todos</router-link>
               </li>
+               <li class="nav-item" v-if="isLoggedIn">
+                 <router-link to="books" class="nav-link">Books</router-link>
+              </li>
               
             </ul>
 
             <span class="nav-item float-right" v-if="isLoggedIn">
                 <button class="btn btn-default btn-xs nav-link" @click="logoutUser">Logout</button>
             </span>
-            <span class="nav-item float-right ml-3" v-else>
+            <span class="nav-item float-right ml-3" v-if="!isLoggedIn">
                  <small> <router-link to="/" class="btn btn-primary btn-xs nav-link">Login</router-link></small>
             </span>
 
@@ -50,7 +53,6 @@ import { EventBus } from '../main';
     },
     created() {
         this.onUser();
-        console.log('hi');
     },
     methods: {
       logoutUser(){

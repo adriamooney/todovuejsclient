@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import userState from './modules/userState';
 import todos from './modules/todos';
+import books from './modules/books';
 
 Vue.use(Vuex)
 
@@ -33,7 +34,8 @@ const store = new Vuex.Store({
   actions,
   modules: {
     userState,
-    todos
+    todos,
+    books
   }
 })
 

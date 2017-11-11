@@ -12,6 +12,7 @@ Vue.use(require('vue-moment'));
 
 import Home from './views/Home.vue'
 import Todos from './views/Todos.vue'
+import Books from './views/Books.vue'
 
 import store from './store'
 
@@ -28,7 +29,13 @@ const routes = [
 		name: 'Todos',
 		path: '/todos',
 		component: Todos
+	},
+	{
+		name: 'Books',
+		path: '/books',
+		component: Books
 	}
+
 	
 ];
 
