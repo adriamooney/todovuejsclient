@@ -11,13 +11,13 @@
               
               
                <li class="nav-item">
-                <router-link to="/" class="nav-link">Home</router-link>
+                <router-link :to="{name: 'Home'}" class="nav-link">Home</router-link>
               </li>
               <li class="nav-item" v-if="isLoggedIn">
-                 <router-link to="todos" class="nav-link">Todos</router-link>
+                 <router-link :to="{name: 'Todos'}" class="nav-link">Todos</router-link>
               </li>
                <li class="nav-item" v-if="isLoggedIn">
-                 <router-link to="books" class="nav-link">Books</router-link>
+                 <router-link :to="{ name: 'Books', params: { skip: 1 }}" class="nav-link">Books</router-link>
               </li>
               
             </ul>
